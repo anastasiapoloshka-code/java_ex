@@ -1,13 +1,13 @@
-package lr4;
-
 public class Example1 {
     public static void main(String[] args) {
-        try {
-            System.out.println("0");
-            throw new RuntimeException("Непроверяемая ошибка");
-        } catch (RuntimeException e) {
-            System.out.println("1 " + e);
+        printSequence(1);
+    }
+
+    public static void printSequence(int x) {
+        if (x >= 20) {
+            return;
         }
-        System.out.println("2");
+        System.out.print(x + " ");
+        printSequence(2 * x + 1);
     }
 }
